@@ -5,6 +5,7 @@ import StickyCursor from "@/components/stickyCursor";
 import Navbar from "@/components/shared/Navbar";
 import Banner from "@/components/home/Banner";
 import gsap from "gsap";
+import VideoBanner from "@/components/home/VideoBanner";
 
 export default function Home() {
   const stickyElement = useRef(null);
@@ -47,8 +48,9 @@ export default function Home() {
       <main className={`${styles.main}`}>
         <div className={` ${isActive ? "blurEffect" : ""}`}>
           {/* add your components here an you can change main class */}
-          <div ref={bannerRef}>
+          <div ref={bannerRef} className="flex w-full flex-col gap-[100px]">
             <Banner />
+            <VideoBanner />
           </div>
         </div>
       </main>

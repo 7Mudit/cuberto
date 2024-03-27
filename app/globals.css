@@ -38,7 +38,7 @@ body {
 }
 
 .blurEffect {
-  filter: blur(2px);
+  filter: blur(12px);
   pointer-events: none;
   /* Optional: disable interactions with the blurred elements */
   user-select: none;
