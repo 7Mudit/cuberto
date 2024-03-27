@@ -15,7 +15,7 @@ const Banner = () => {
     <div className="flex flex-col pl-[20px] sm:pl-[134px] w-full items-start justify-center gap-5">
       <div className="w-full">
         <span
-          className={`text-[46px] leading-[41px] xs:text-[62px] xs:leading-[55px] xl:text-[125px] animatable-element xl:leading-[112px] ${martel.className}`}
+          className={`text-[46px] leading-[41px] sm:text-[62px] xs:leading-[55px] xl:text-[125px] animatable-element xl:leading-[112px] ${martel.className}`}
         >
           We{" "}
           <span
@@ -39,14 +39,14 @@ const Banner = () => {
           </video>
         </div>
         <div
-          className={`text-[24px] leading-[41px] xs:text-[62px] xs:leading-[55px] xl:text-[125px] animatable-element xl:leading-[112px] ${martel.className}`}
+          className={`text-[24px] leading-[41px] sm:text-[62px] xs:leading-[55px] xl:text-[125px] animatable-element xl:leading-[112px] ${martel.className}`}
         >
           digital products{" "}
         </div>
       </div>
       <div className="w-full">
         <span
-          className={`text-[46px] leading-[41px] xs:text-[62px] xs:leading-[55px] xl:text-[125px] animatable-element xl:leading-[112px] ${martel.className}`}
+          className={`text-[46px] leading-[41px] sm:text-[62px] xs:leading-[55px] xl:text-[125px] animatable-element xl:leading-[112px] ${martel.className}`}
         >
           from scratch
         </span>

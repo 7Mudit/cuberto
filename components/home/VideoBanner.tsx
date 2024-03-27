@@ -2,9 +2,9 @@ import React from "react";
 
 const VideoBanner = () => {
   return (
-    <div className="w-full h-[550px] sm:h-[800px] animatable-element  ">
+    <div className="w-full h-[550px]  sm:h-[800px] animatable-element  ">
       <video
-        className="pointer-events-none w-full h-full object-cover "
+        className="pointer-events-none w-full object-cover h-full  "
         autoPlay
         loop
         muted
