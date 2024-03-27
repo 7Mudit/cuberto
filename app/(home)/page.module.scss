@@ -1,4 +1,7 @@
-.main{
-    height: 200vh;
-    background-color: white;
+.main {
+  height: 100%;
+  display: flex;
+  gap: 100px;
+  margin-top: 50px;
+  flex-direction: column;
 }

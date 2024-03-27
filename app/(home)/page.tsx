@@ -3,6 +3,7 @@ import styles from "./page.module.scss";
 import { useRef, useState } from "react";
 import StickyCursor from "@/components/stickyCursor";
 import Navbar from "@/components/shared/Navbar";
+import Banner from "@/components/home/Banner";
 
 export default function Home() {
   const stickyElement = useRef(null);
@@ -20,6 +21,7 @@ export default function Home() {
       <main className={`${styles.main}`}>
         <div className={` ${isActive ? "blurEffect" : ""}`}>
           {/* add your components here an you can change main class */}
+          <Banner />
         </div>
       </main>
     </>
