@@ -2,10 +2,12 @@ export const menuSlide = {
   initial: { x: "600px" },
   enter: {
     x: "50px",
+
     transition: { duration: 1.2, ease: [0.76, 0, 0.24, 1] },
   },
   exit: {
-    x: "1000px",
+    x: "600px",
+
     transition: { duration: 1.2, ease: [0.76, 0, 0.24, 1] },
   },
 };
