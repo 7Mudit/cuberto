@@ -44,3 +44,86 @@ body {
   user-select: none;
   /* Optional: prevent text selection on the blurred elements */
 }
+
+/* .animated-button {
+  position: relative;
+  content: "";
+  border-radius: 60px;
+
+}
+
+.animated-button::after {
+  content: "";
+  width: 100%;
+  height: 0;
+  width: 0;
+  position: absolute;
+  background-color: black;
+  border-radius: 60px;
+  bottom: 0;
+
+}
+
+.animated-button:hover::after {
+  height: 100%;
+  cursor: pointer;
+  width: 100%;
+  transition: all;
+  transition-duration: 0.5s;
+} */
+
+
+.animated-button {
+  font-size: 30px;
+  padding: 30px 50px;
+  border: 2px solid grey;
+  /* Border color */
+  border-radius: 50px;
+  /* Makes the button rounded */
+  background-color: white;
+  /* Initial background color */
+  color: black;
+  /* Initial text color */
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  /* Hide the sliding elements */
+  transition: all 0.3s ease-in-out;
+}
+
+.animated-button span {
+  position: relative;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.animated-button::after {
+  content: "Our Work";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  /* Start below the button */
+  background-color: black;
+  /* Background color on hover */
+  color: white;
+  /* Text color on hover */
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  border-radius: 50px;
+  padding: 30px 50px;
+}
+
+.animated-button:hover span {
+  transform: translateY(-100%);
+  /* Move the text up */
+  opacity: 0;
+  /* Fade out the text */
+}
+
+.animated-button:hover::after {
+  bottom: 0;
+  /* Slide the text up */
+}

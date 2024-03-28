@@ -6,6 +6,9 @@ import Navbar from "@/components/shared/Navbar";
 import Banner from "@/components/home/Banner";
 import gsap from "gsap";
 import VideoBanner from "@/components/home/VideoBanner";
+import MidSection from "@/components/home/MidSection";
+import Project from "@/components/home/Project";
+import Philosophy from "@/components/home/Philosophy";
 
 export default function Home() {
   const stickyElement = useRef(null);
@@ -51,6 +54,9 @@ export default function Home() {
           <div ref={bannerRef} className="flex w-full flex-col gap-[100px]">
             <Banner />
             <VideoBanner />
+            <MidSection />
+            <Project />
+            <Philosophy />
           </div>
         </div>
       </main>
