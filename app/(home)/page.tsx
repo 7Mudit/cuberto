@@ -10,6 +10,8 @@ import MidSection from "@/components/home/MidSection";
 import Project from "@/components/home/Project";
 import Philosophy from "@/components/home/Philosophy";
 import Resources from "@/components/home/Resources";
+import Inspo from "@/components/home/Inspo";
+import Footer from "@/components/home/Footer";
 
 export default function Home() {
   const stickyElement = useRef(null);
@@ -83,6 +85,17 @@ export default function Home() {
             >
               <Resources isWhiteCursor={isWhiteCursor2} />
             </div>
+            {/* <Inspo /> */}
+          </div>
+          <div
+            onMouseOver={() => {
+              setIsWhiteCursor2(false);
+            }}
+            onMouseLeave={() => {
+              setIsWhiteCursor2(true);
+            }}
+          >
+            <Footer />
           </div>
         </div>
       </main>
