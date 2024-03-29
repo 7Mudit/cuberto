@@ -13,6 +13,7 @@ import Philosophy from "@/components/home/Philosophy";
 export default function Home() {
   const stickyElement = useRef(null);
   const [isActive, setIsActive] = useState(false);
+  const [isWhiteCursor, setIsWhiteCursor] = useState(true);
 
   // for animation purpose
   const bannerRef = useRef<HTMLDivElement | null>(null); // Reference to the Banner component for animation
@@ -47,7 +48,8 @@ export default function Home() {
         setIsActive={setIsActive}
       />
       {/* <HeaderMagnetic ref={stickyElement} /> */}
-      <StickyCursor stickyElement={stickyElement} />
+      {isWhiteCursor && <StickyCursor stickyElement={stickyElement} />}
+
       <main className={`${styles.main}`}>
         <div className={` ${isActive ? "blurEffect" : ""}`}>
           {/* add your components here an you can change main class */}
@@ -55,7 +57,17 @@ export default function Home() {
             <Banner />
             <VideoBanner />
             <MidSection />
-            <Project />
+            <div
+              onMouseOver={() => {
+                setIsWhiteCursor(false);
+              }}
+              onMouseLeave={() => {
+                setIsWhiteCursor(true);
+              }}
+            >
+              <Project isWhiteCursor={isWhiteCursor} />
+            </div>
+
             <Philosophy />
           </div>
         </div>
