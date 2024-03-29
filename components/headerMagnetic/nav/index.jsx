@@ -60,7 +60,7 @@ export default function Index() {
             );
           })}
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
       <Curve />
     </motion.div>

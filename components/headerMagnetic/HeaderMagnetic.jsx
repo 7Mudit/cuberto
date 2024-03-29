@@ -26,12 +26,12 @@ const HeaderMagnetic = forwardRef(function Index(props, ref) {
             }}
             className={`${styles.burger} ${
               isActive ? styles.burgerActive : ""
-            }`}
+            } `}
           >
             <div ref={ref} className={styles.bounds}></div>
           </div>
         </Magnetic>
-      </div>{" "}
+      </div>
       <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
     </>
   );

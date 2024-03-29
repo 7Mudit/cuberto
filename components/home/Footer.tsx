@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import "./Footer.css"; // Ensure you have styles for .video-container and .circle-container
 import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
@@ -35,6 +35,7 @@ const followLinks = [
 
 const Footer = () => {
   // The text you want to display
+
   const circularText =
     "--------Follow Us · Design · Identity · Product---------";
 
@@ -44,6 +45,7 @@ const Footer = () => {
         <p className="text-[50px] lg:text-[132px] text-white leading-none">
           Follow Us
         </p>
+        {/* video */}
         <div
           className="relative bg-white w-[160px] h-[160px] rounded-full circle-container"
           style={{ width: "160px", height: "160px" }}
