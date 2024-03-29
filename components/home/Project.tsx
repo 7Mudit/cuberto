@@ -9,75 +9,52 @@ const Project = ({ isWhiteCursor }) => {
   const [hoveredProject, setHoveredProject] = useState(null);
   const [isActive, setIsActive] = useState(false);
   const [loadedVideos, setLoadedVideos] = useState({});
-  const projectRefs = useRef([]);
-
-  const handleMouseEnter = (projectType, index) => {
-    const projectId = `${projectType}-${index}`;
-    setHoveredProject(projectId);
-    // Apply a scale animation for a smooth transition
-    if (projectRefs.current[projectId]) {
-      gsap.to(projectRefs.current[projectId], {
-        scale: 1.05,
-        duration: 1.3,
-      });
-    }
-  };
-
-  const handleMouseLeave = (projectType, index) => {
-    const projectId = `${projectType}-${index}`;
-    setHoveredProject(null);
-    // Reset scale animation
-    if (projectRefs.current[projectId]) {
-      gsap.to(projectRefs.current[projectId], {
-        scale: 1,
-        duration: 1.3,
-      });
-    }
-  };
-
-  const handleVideoLoaded = (projectType, index) => {
-    const projectId = `${projectType}-${index}`;
-    setLoadedVideos((prevLoadedVideos) => ({
-      ...prevLoadedVideos,
-      [projectId]: true,
-    }));
-  };
 
   const RenderProject = (project, projectType, index) => {
     const projectId = `${projectType}-${index}`;
-    const isVideoLoaded = loadedVideos[projectId];
     const isHovered = hoveredProject === projectId;
-    projectRefs.current[projectId] = useRef();
+
+    // Ref to store the video element for direct manipulation
+    const videoRef = useRef(null);
+
+    // Handle onMouseEnter event to play the video
+    const handleMouseEnter = () => {
+      if (videoRef.current && !loadedVideos[projectId]) {
+        videoRef.current.play();
+      }
+    };
+
+    // Handle onMouseLeave event to pause the video and reset to start
+    const handleMouseLeave = () => {
+      if (videoRef.current) {
+        videoRef.current.pause();
+        videoRef.current.currentTime = 0; // Reset video to start
+      }
+    };
 
     return (
       <div
         key={projectId}
-        ref={(el) => (projectRefs.current[projectId] = el)}
         className="flex flex-col gap-10"
-        onMouseEnter={() => handleMouseEnter(projectType, index)}
-        onMouseLeave={() => handleMouseLeave(projectType, index)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
-        {isHovered && isVideoLoaded ? (
-          <video
-            className="w-full rounded-3xl"
-            autoPlay
-            loop
-            muted
-            playsInline
-            onLoadedData={() => handleVideoLoaded(projectType, index)}
-          >
-            <source src={project.video} type="video/mp4" />
-          </video>
-        ) : (
-          <Image
-            alt={project.name}
-            width={projectType === "projectdata1" ? 434 : 400}
-            height={projectType === "projectdata1" ? 434 : 400}
-            src={project.image}
-            className="w-full object-contain rounded-3xl"
-            onLoad={() => handleVideoLoaded(projectType, index)}
-          />
-        )}
+        {/* Use the poster attribute for the video's first frame or any placeholder image */}
+        <video
+          ref={videoRef}
+          className="rounded-3xl"
+          width={434}
+          height={434}
+          loop
+          muted
+          playsInline
+          onLoadedData={() =>
+            setLoadedVideos((prev) => ({ ...prev, [projectId]: true }))
+          }
+        >
+          <source src={project.video} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <p className="text-slate-300 text-xl sm:px-8">{project.name}</p>
       </div>
     );
