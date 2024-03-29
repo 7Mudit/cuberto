@@ -12,14 +12,14 @@ const Project = ({ isWhiteCursor }) => {
 
   const RenderProject = (project, projectType, index) => {
     const projectId = `${projectType}-${index}`;
-    const isHovered = hoveredProject === projectId;
 
     // Ref to store the video element for direct manipulation
     const videoRef = useRef(null);
 
     // Handle onMouseEnter event to play the video
     const handleMouseEnter = () => {
-      if (videoRef.current && !loadedVideos[projectId]) {
+      // Playing the video regardless of its loaded state
+      if (videoRef.current) {
         videoRef.current.play();
       }
     };
@@ -32,6 +32,7 @@ const Project = ({ isWhiteCursor }) => {
       }
     };
 
+    // Removed the loadedVideos check to ensure videos play every hover
     return (
       <div
         key={projectId}
@@ -39,7 +40,6 @@ const Project = ({ isWhiteCursor }) => {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        {/* Use the poster attribute for the video's first frame or any placeholder image */}
         <video
           ref={videoRef}
           className="rounded-3xl"
