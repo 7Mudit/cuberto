@@ -8,7 +8,7 @@ const noto = Noto_Sans({
   weight: "500",
 });
 
-export default function BlurryCursor({ isActive }) {
+export default function BlurryCursor({ isActive, text }) {
   const mouse = useRef({ x: 0, y: 0 });
   const delayedMouse = useRef({ x: 0, y: 0 });
   const rafId = useRef(null);
@@ -55,7 +55,7 @@ export default function BlurryCursor({ isActive }) {
   }, [isActive]);
 
   return (
-    <div className="relative">
+    <div className="relative z-[1000]">
       <div
         style={{
           backgroundColor: "white",
@@ -64,11 +64,11 @@ export default function BlurryCursor({ isActive }) {
           //   filter: `blur(${isActive ? 30 : 0}px)`,
           transition: `height 0.3s ease-out, width 0.3s ease-out, filter 0.3s ease-out`,
         }}
-        className="top-0 left-0 fixed rounded-full flex items-center justify-center  pointer-events-none"
+        className="top-0 left-0 fixed rounded-full flex items-center justify-center   pointer-events-none"
         ref={circle}
       >
         {isActive && (
-          <span className={`${noto.className} text-[14px]`}>Explore</span>
+          <span className={`${noto.className} text-[14px]`}>{text}</span>
         )}
       </div>
     </div>

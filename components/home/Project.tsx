@@ -113,7 +113,7 @@ const Project = ({ isWhiteCursor }) => {
           </div>
         </div>
       </div>
-      {!isWhiteCursor && <Cursor isActive={isActive} />}
+      {!isWhiteCursor && <Cursor isActive={isActive} text="Explore" />}
     </>
   );
 };

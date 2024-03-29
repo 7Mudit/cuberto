@@ -127,3 +127,83 @@ body {
   bottom: 0;
   /* Slide the text up */
 }
+
+.animated-button2 {
+  font-size: 20px;
+  padding: 20px 15px;
+  border: 2px solid grey;
+  border-radius: 50px;
+  background-color: white;
+  /* This will be covered by the ::before pseudo-element */
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+
+  overflow: hidden;
+  transition: background-color 0.3s ease-in-out;
+  /* Transition for the button's background-color */
+}
+
+.animated-button2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  transform: translateY(-50%);
+  right: 0;
+  top: 50%;
+  bottom: 0;
+  color: black;
+  background-color: white;
+  /* Background color of the button */
+  transition: all 0.8s ease-in-out;
+  border-radius: 50px;
+  /* Ensure this matches the button's border-radius */
+  z-index: 0;
+  /* Keep this layer below the text */
+}
+
+.animated-button2 span {
+  position: relative;
+  display: block;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+
+  /* Ensure text is above the ::before pseudo-element */
+}
+
+.animated-button2::after {
+  content: "View Resources";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  /* Start below the button */
+  background-color: black;
+  /* Background color of the new content */
+  color: white;
+  /* Text color of the new content */
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+  border-radius: 50px;
+  padding: 20px 15px;
+  z-index: 2;
+  /* Ensure this content is above the original text */
+}
+
+.animated-button2:hover::before {
+  top: -100%;
+  /* Slide the original background up */
+}
+
+.animated-button2:hover span {
+  transform: translateY(-100%);
+  /* Move the original text up */
+  opacity: 0;
+}
+
+.animated-button2:hover::after {
+  bottom: 0;
+  /* Slide the new content up */
+}
