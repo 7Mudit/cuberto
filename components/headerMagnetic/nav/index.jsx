@@ -6,7 +6,6 @@ import { usePathname } from "next/navigation";
 import { menuSlide } from "../anim";
 import Link from "./Link";
 import Curve from "./Curve";
-import Footer from "./Footer";
 
 const navItems = [
   {
@@ -14,8 +13,8 @@ const navItems = [
     href: "/",
   },
   {
-    title: "Work",
-    href: "/work",
+    title: "Projects",
+    href: "/project",
   },
   {
     title: "About",

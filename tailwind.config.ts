@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        matterLight: ["matterLight"],
+        matterRegular: ["matterRegular"],
+      },
       screens: {
         xs: "420px",
       },

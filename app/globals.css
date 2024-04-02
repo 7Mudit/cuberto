@@ -9,6 +9,18 @@
   user-select: none;
 }
 
+@font-face {
+  font-family: 'matterLight';
+  src: url('/fonts/Matter-Light.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'matterRegular';
+  src: url('/fonts/Matter-RegularItalic.ttf') format('ttf');
+
+}
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -366,4 +378,26 @@ body {
 .footer-button2:hover::after {
   bottom: 0;
   /* Slide the new content up */
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom left;
+  /* Set the transform origin to bottom right */
+  transition: transform 0.5s ease-out;
+  transform: scaleX(1);
+  /* Initially set the scale to 1 (full width) */
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(0);
+  /* Scale to 0 (no width) when hovering */
+  transform-origin: bottom right;
+  /* Change the transform origin to bottom left */
 }

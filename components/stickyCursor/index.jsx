@@ -83,14 +83,22 @@ export default function Index({ stickyElement }) {
   };
 
   useEffect(() => {
-    stickyElement.current.addEventListener("mouseenter", manageMouseOver);
-    stickyElement.current.addEventListener("mouseleave", manageMouseLeave);
+    const element = stickyElement.current;
+    if (element) {
+      element.addEventListener("mouseenter", manageMouseOver);
+      element.addEventListener("mouseleave", manageMouseLeave);
+    }
+
     window.addEventListener("mousemove", manageMouseMove);
     return () => {
-      stickyElement.current.removeEventListener("mouseenter", manageMouseOver);
-      stickyElement.current.removeEventListener("mouseleave", manageMouseLeave);
+      if (element) {
+        element.removeEventListener("mouseenter", manageMouseOver);
+        element.removeEventListener("mouseleave", manageMouseLeave);
+      }
+
       window.removeEventListener("mousemove", manageMouseMove);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isHovered]);
 
   const template = ({ rotate, scaleX, scaleY }) => {

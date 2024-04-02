@@ -4,7 +4,7 @@ import { projectdata1, projectdata2 } from "../../data/projectdata";
 
 import Cursor from "./Cursor";
 
-const Project = ({ isWhiteCursor }) => {
+const Project = ({ isBlackCursor }) => {
   const [isActive, setIsActive] = useState(false);
 
   const RenderProject = (project, projectType, index) => {
@@ -49,17 +49,17 @@ const Project = ({ isWhiteCursor }) => {
           <source src={project.video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-        <p className="text-slate-300 text-xl sm:px-8">{project.name}</p>
+        <p className="text-slate-500 text-xl sm:px-8">{project.name}</p>
       </div>
     );
   };
 
   return (
     <>
-      <div className="bg-black w-full h-auto rounded-t-[60px] px-7 sm:px-16 py-16 relative">
+      <div className="bg-white w-full h-auto rounded-t-[60px] px-7 sm:px-16 py-16 relative">
         <div className="w-full bg-white h-10 sm:h-32 absolute bottom-0 left-0 rounded-t-[80px]"></div>
         <div className="flex flex-col gap-10   md:px-10">
-          <span className="text-white text-[20vw] sm:text-8xl font-sans">
+          <span className="text-black text-[20vw] sm:text-8xl font-sans">
             Featured
           </span>
           <div className="flex md:flex-row flex-col  md:items-center gap-10">
@@ -72,7 +72,7 @@ const Project = ({ isWhiteCursor }) => {
             >
               <source src="/assets/projectheadvideo.mp4" type="video/mp4" />
             </video>
-            <span className="text-white italic font-thin text-[20vw] sm:text-8xl font-sans">
+            <span className="text-black italic font-thin text-[20vw] sm:text-8xl font-sans">
               projects
             </span>
           </div>
@@ -107,7 +107,7 @@ const Project = ({ isWhiteCursor }) => {
           </div>
         </div>
       </div>
-      {!isWhiteCursor && <Cursor isActive={isActive} text="Explore" />}
+      {!isBlackCursor && <Cursor isActive={isActive} text="Explore" />}
     </>
   );
 };
