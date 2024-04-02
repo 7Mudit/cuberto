@@ -140,6 +140,61 @@ body {
   /* Slide the text up */
 }
 
+.animated-button-submit {
+  font-size: 30px;
+  padding: 30px 50px;
+  border: 2px solid grey;
+  /* Border color */
+  border-radius: 50px;
+  /* Makes the button rounded */
+  background-color: white;
+  /* Initial background color */
+  color: black;
+  /* Initial text color */
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  /* Hide the sliding elements */
+  transition: all 0.3s ease-in-out;
+}
+
+.animated-button-submit span {
+  position: relative;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.animated-button-submit::after {
+  content: "Submit";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -100%;
+  /* Start below the button */
+  background-color: black;
+  /* Background color on hover */
+  color: white;
+  /* Text color on hover */
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  border-radius: 50px;
+  padding: 30px 50px;
+}
+
+.animated-button-submit:hover span {
+  transform: translateY(-100%);
+  /* Move the text up */
+  opacity: 0;
+  /* Fade out the text */
+}
+
+.animated-button-submit:hover::after {
+  bottom: 0;
+  /* Slide the text up */
+}
+
 .animated-button2 {
   font-size: 20px;
   padding: 20px 15px;
