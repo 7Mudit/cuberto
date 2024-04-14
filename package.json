@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@studio-freight/react-lenis": "^0.0.46",
+    "build": "^0.1.4",
     "framer-motion": "^11.0.22",
     "gsap": "^3.12.5",
     "next": "14.1.4",

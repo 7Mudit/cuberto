@@ -50,11 +50,18 @@ body {
 }
 
 .blurEffect {
-  filter: blur(12px);
+  filter: blur(15px);
+  /* filter: brightness(0.2); */
+  /* filter: contrast(200%); */
+
+  /* filter: grayscale(50%); */
+  /* filter: hue-rotate(90deg); */
+  /* filter: invert(75%); */
+  /* filter: opacity(25%); */
+
   pointer-events: none;
-  /* Optional: disable interactions with the blurred elements */
   user-select: none;
-  /* Optional: prevent text selection on the blurred elements */
+
 }
 
 /* .animated-button {

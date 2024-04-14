@@ -8,8 +8,11 @@ import {
   transform,
   animate,
 } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 export default function Index({ stickyElement }) {
+  const pathname = usePathname();
+
   const [isHovered, setIsHovered] = useState(false);
   const cursor = useRef(null);
   const cursorSize = isHovered ? 60 : 15;
@@ -119,7 +122,9 @@ export default function Index({ stickyElement }) {
           width: cursorSize,
           height: cursorSize,
         }}
-        className={styles.cursor}
+        className={`${styles.cursor} bg-blend-difference ${
+          pathname === "/about" ? "bg-white" : "bg-black"
+        } `}
         ref={cursor}
       ></motion.div>
     </div>

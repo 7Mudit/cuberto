@@ -4,12 +4,27 @@ const coming = Coming_Soon({ subsets: ["latin"], weight: "400" });
 import { forwardRef } from "react";
 import HeaderMagnetic from "../headerMagnetic/HeaderMagnetic";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = forwardRef(function Index(props, ref) {
   const { isActive, setIsActive } = props;
+  const pathname = usePathname();
   return (
-    <div className="flex top-0 w-screen  min-h-[65px] py-5 px-2 sm:px-12 flex-row bg-white justify-between items-center">
-      <Image src="/assets/logo.png" alt="logo image" width={200} height={200} />
+    <div
+      className={`flex top-0 w-screen  min-h-[65px] py-5 px-2 sm:px-12 flex-row  ${
+        pathname === "/about" ? "bg-black" : "bg-white"
+      } justify-between items-center`}
+    >
+      <Link href="/">
+        <Image
+          src="/assets/logo.png"
+          alt="logo image"
+          width={200}
+          height={200}
+        />
+      </Link>
+
       <HeaderMagnetic ref={ref} isActive={isActive} setIsActive={setIsActive} />
     </div>
   );

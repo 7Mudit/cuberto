@@ -51,7 +51,7 @@ export default function Home() {
         isActive={isActive}
         setIsActive={setIsActive}
       />
-      {/* <HeaderMagnetic ref={stickyElement} /> */}
+
       {isWhiteCursor && isWhiteCursor2 && (
         <StickyCursor stickyElement={stickyElement} />
       )}
