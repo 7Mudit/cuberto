@@ -10,47 +10,25 @@ import card8image from "../public/assets/cardimage8.jpeg";
 export const projectdata1 = [
   {
     image: card1image,
-    video: "/assets/videocard1.mp4",
-    name: "Punto Pago",
+    video: "/assets/7578544-uhd_3840_2160_30fps.mp4",
+    name: "High point homes",
   },
   {
     image: card2image,
-    video: "/assets/videocard2.mp4",
-    name: "Riyad",
-  },
-  {
-    image: card3image,
-    video: "/assets/videocard3.mp4",
-    name: "Qvino",
-  },
-
-  {
-    image: card4image,
-    video: "/assets/videocard4.mp4",
-    name: "Potion",
+    video: "assets/7578550-uhd_3840_2160_30fps.mp4",
+    name: "Imperial Properties",
   },
 ];
 
 export const projectdata2 = [
   {
     image: card5image,
-    video: "/assets/videocard5.mp4",
-    name: "Flipaclip",
+    video: "/assets/3773488-hd_1920_1080_30fps.mp4",
+    name: "Elite Estate",
   },
   {
     image: card6image,
-    video: "/assets/videocard6.mp4",
-    name: "Zelt",
-  },
-  {
-    image: card7image,
-    video: "/assets/videocard7.mp4",
-    name: "Ferrumpipe",
-  },
-
-  {
-    image: card8image,
-    video: "/assets/videocard8.mp4",
-    name: "Magma",
+    video: "/assets/3773486-hd_1920_1080_30fps.mp4",
+    name: "Horizon",
   },
 ];

@@ -39,7 +39,7 @@ const Project = ({ isBlackCursor }) => {
       >
         <video
           ref={videoRef}
-          className="rounded-3xl"
+          className="rounded-3xl w-full"
           width={434}
           height={434}
           loop
