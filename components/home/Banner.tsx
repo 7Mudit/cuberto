@@ -27,7 +27,7 @@ const Banner = () => {
       </div>
 
       <div className="flex flex-row items-center justify-center gap-2">
-        <div className="w-[160px] animatable-element h-[110px] overflow-hidden">
+        <div className="w-[160px] animatable-element h-[110px] ">
           <video
             className="pointer-events-none w-[160px] h-[110px] rounded-[40%] object-cover "
             autoPlay
