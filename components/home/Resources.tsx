@@ -13,13 +13,7 @@ const Resources = ({ isWhiteCursor }: any) => {
     <div className="bg-black h-auto px-8 md:px-16 rounded-t-[70px] pt-13 md:pt-20 ">
       <div className="flex flex-col items-start gap-5 py-20">
         <div className="text-[12vw] lg:text-8xl text-white font-sans ">
-          Developement
-        </div>
-        <div className="text-[12vw] lg:text-8xl text-white font-sans ">
-          and design
-        </div>
-        <div className="text-[12vw] lg:text-8xl text-white font-sans font-thin italic">
-          resources
+          Testimonials
         </div>
       </div>
 
@@ -58,7 +52,7 @@ const Resources = ({ isWhiteCursor }: any) => {
           {resourcedata.map((resource, index) => (
             <SwiperSlide key={index} className="w-6/12 px-2 ">
               <div className="w-full h-[350px] sm:h-[500px] xl:h-[300px] flex flex-col gap-10">
-                <Image
+                {/* <Image
                   src={resource.image}
                   alt="resource image"
                   width={470}
@@ -70,14 +64,23 @@ const Resources = ({ isWhiteCursor }: any) => {
                   onMouseLeave={() => {
                     setIsActive(false);
                   }}
-                />
-                <p className="font-sans text-white">{resource.tagline}</p>
+                /> */}
+                <div
+                  onMouseOver={() => {
+                    setIsActive(true);
+                  }}
+                  onMouseLeave={() => {
+                    setIsActive(false);
+                  }}
+                  className="w-[350px] h-[260px] bg-emerald-400 object-cover rounded-2xl "
+                ></div>
+                {/* <p className="font-sans text-white">{resource.tagline}</p> */}
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-      <div className="w-full h-auto flex justify-center md:justify-end  md:py-32 px-3 md:px-6">
+      {/* <div className="w-full h-auto flex justify-center md:justify-end  md:py-32 px-3 md:px-6">
         <div className=" w-9/12 md:w-4/12 flex flex-col  gap-10">
           <p className="text-2xl text-slate-400 text-center font-sans">
             We regularly release design courses, offer advice to newbie
@@ -89,7 +92,7 @@ const Resources = ({ isWhiteCursor }: any) => {
             <span>View Resources</span>
           </button>
         </div>
-      </div>
+      </div> */}
 
       {!isWhiteCursor && <Cursor isActive={isActive} text="Drag" />}
     </div>

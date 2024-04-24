@@ -17,11 +17,11 @@ const Banner = () => {
         <span
           className={`text-[46px] leading-[41px] sm:text-[62px] xs:leading-[55px] xl:text-[125px] animatable-element xl:leading-[112px] ${martel.className}`}
         >
-          We{" "}
+          Crafting{" "}
           <span
             className={` ${robot.className} animatable-element !text-[400] !italic`}
           >
-            develop
+            infrastructure
           </span>
         </span>
       </div>
@@ -35,20 +35,20 @@ const Banner = () => {
             muted
             playsInline={true}
           >
-            <source src="/assets/firstVideo.mp4" type="video/mp4" />
+            <source src="/assets/Home_Front.mp4" type="video/mp4" />
           </video>
         </div>
         <div
           className={`text-[24px] leading-[41px] sm:text-[62px] xs:leading-[55px] xl:text-[125px] animatable-element xl:leading-[112px] ${martel.className}`}
         >
-          digital products{" "}
+          for 2 decades{" "}
         </div>
       </div>
       <div className="w-full">
         <span
           className={`text-[46px] leading-[41px] sm:text-[62px] xs:leading-[55px] xl:text-[125px] animatable-element xl:leading-[112px] ${martel.className}`}
         >
-          from scratch
+          and beyond
         </span>
       </div>
     </div>
