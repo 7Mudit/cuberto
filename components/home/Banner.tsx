@@ -35,7 +35,7 @@ const Banner = () => {
             muted
             playsInline={true}
           >
-            <source src="/assets/Home_Front.mp4" type="video/mp4" />
+            <source src="/assets/HOME_FRONT.mp4" type="video/mp4" />
           </video>
         </div>
         <div
