@@ -20,16 +20,14 @@ const Philosophy = () => {
         >
           <source src="/assets/philosophyvideo.mp4" type="video/mp4" />
         </video>
-        <p className="w-10/12 md:w-6/12 px-5 sm:px-16 fonrt-sans text-xl mf:text-md lg:text-xl">
-          In our team, developers work alongside designers, strategists and
-          analysts. Cuberto doesn&apos;t do cookie-cutter solutions and we build
-          products exactly as they were during the design phase, no short cuts
-          or simplifications.
-          <br />
-          <br />
-          We&apos;re driven by user‑centered design that drives productivity and
-          increases revenue. Our expertise and ingenuity are remarkable, yet we
-          always strive to outdo and outperform our previous achievements.
+        <p className="w-10/12 md:w-6/12 px-5 sm:px-16 fonrt-sans text-xl mf:text-md lg:text-xl text-justify">
+          At Ayaan Infra, with over two decades of unwavering commitment to
+          excellence, we shape the future by delivering superior infrastructure
+          solutions. Guided by innovation, integrity, and a passion for quality,
+          we empower communities and drive sustainable growth. Our legacy is
+          built on trust, expertise, and a relentless pursuit of excellence,
+          ensuring that every project we undertake transforms lives, enriches
+          environments, and stands the test of time.
         </p>
       </div>
     </div>

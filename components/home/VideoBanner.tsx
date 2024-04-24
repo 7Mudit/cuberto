@@ -10,7 +10,7 @@ const VideoBanner = () => {
         muted
         playsInline={true}
       >
-        <source src="/assets/secondVideo.mp4" type="video/mp4" />
+        <source src="/assets/HOME_FRONT.mp4" type="video/mp4" />
       </video>
     </div>
   );
