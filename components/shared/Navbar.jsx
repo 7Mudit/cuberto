@@ -6,6 +6,7 @@ import HeaderMagnetic from "../headerMagnetic/HeaderMagnetic";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import image_logo from "@/public/assets/logo.png";
 
 const Navbar = forwardRef(function Index(props, ref) {
   const { isActive, setIsActive } = props;
@@ -17,12 +18,7 @@ const Navbar = forwardRef(function Index(props, ref) {
       } justify-between items-center`}
     >
       <Link href="/">
-        <Image
-          src="/assets/logo.png"
-          alt="logo image"
-          width={200}
-          height={200}
-        />
+        <Image src={image_logo} alt="logo image" width={200} height={200} />
       </Link>
 
       <HeaderMagnetic ref={ref} isActive={isActive} setIsActive={setIsActive} />
