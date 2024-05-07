@@ -58,20 +58,12 @@ const Project = ({ isBlackCursor }) => {
     <>
       <div className="bg-white w-full h-auto rounded-t-[60px] px-7 sm:px-16 py-16 relative">
         <div className="w-full bg-white h-10 sm:h-32 absolute bottom-0 left-0 rounded-t-[80px]"></div>
-        <div className="flex flex-col gap-10   md:px-10">
+        <div className="flex flex-col  md:gap-10   md:px-10">
           <span className="text-black text-[20vw] sm:text-8xl font-sans">
             Featured
           </span>
           <div className="flex md:flex-row flex-col  md:items-center gap-10">
-            <video
-              className="pointer-events-none w-[160px] h-auto rounded-[40%] object-cover"
-              autoPlay
-              loop
-              muted
-              playsInline={true}
-            >
-              <source src="/assets/projectheadvideo.mp4" type="video/mp4" />
-            </video>
+            <div className="w-[160px] md:flex hidden"></div>
             <span className="text-black italic font-thin text-[20vw] sm:text-8xl font-sans">
               projects
             </span>

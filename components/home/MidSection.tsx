@@ -4,8 +4,14 @@ const MidSection = () => {
   return (
     <div className="w-full auto bg-white flex flex-col md:flex-row gap-4 py-16">
       <div className="w-full md:w-6/12 flex justify-center">
-        <video autoPlay loop muted className="w-9/12 h-9/12" playsInline={true}>
-          <source src="/assets/midsectionvideo.mp4" type="video/mp4" />
+        <video
+          autoPlay
+          loop
+          muted
+          className="w-10/12 shadow-xl rounded-2xl h-9/12"
+          playsInline={true}
+        >
+          <source src="/assets/ESTATE.mp4" type="video/mp4" />
         </video>
       </div>
 

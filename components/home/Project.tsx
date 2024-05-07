@@ -63,7 +63,7 @@ const Project = ({ isWhiteCursor }) => {
             Featured
           </span>
           <div className="flex md:flex-row flex-col  md:items-center gap-10">
-            <video
+            {/* <video
               className="pointer-events-none w-[160px] h-auto rounded-[40%] object-cover"
               autoPlay
               loop
@@ -71,8 +71,9 @@ const Project = ({ isWhiteCursor }) => {
               playsInline={true}
             >
               <source src="/assets/projectheadvideo.mp4" type="video/mp4" />
-            </video>
-            <span className="text-white italic font-thin text-[20vw] sm:text-8xl font-sans">
+            </video> */}
+            <div className="w-[160px] md:flex hidden"></div>
+            <span className="text-white  font-thin text-[20vw] sm:text-8xl font-sans">
               projects
             </span>
           </div>
