@@ -55,7 +55,7 @@ const Page = () => {
 
       <div className={` ${isActive ? "blurEffect" : ""}`}>
         <div className="introtext overflow-x-hidden w-full flex flex-col text-[13vw] lg:text-9xl bg-black px-10 md:px-20 py-20">
-          <div className="flex items-center gap-6">
+          <div className="flex sm:flex-row flex-col sm:items-center gap-6">
             <motion.p
               initial="hidden"
               animate="visible"
@@ -70,27 +70,20 @@ const Page = () => {
               variants={slideInFromBottom(0.12)}
               className="flex"
             >
-              <button className="work-button  scale-[40vw] ">
-                <span className="text-[10vw] ">CREATE</span>
+              <button className=" w-auto  bg-[#e0fd60] rounded-full px-8 py-2">
+                <p className="text-[11vw] lg:text-8xl ">CREATE</p>
               </button>
             </motion.div>
           </div>
-          <motion.p
-            initial="hidden"
-            animate="visible"
-            variants={slideInFromBottom(0.15)}
-            className="text-white"
-          >
-            MEMORABLE
-          </motion.p>
+
           <motion.div
             initial="hidden"
             animate="visible"
             variants={slideInFromBottom(0.2)}
-            className="flex items-end gap-3 sm:gap-5 md:gap-10"
+            className="flex items-baseline gap-3 sm:gap-5 md:gap-10"
           >
-            <div className="w-[12vw] sm:w-[20vw] md:w-[80px] h-1 md:h-2 bg-white animate-pulse"></div>
-            <p className="text-white ">WEBSITES</p>
+            <div className="w-[12vw] sm:w-[15vw] md:w-[80px] h-1 md:h-2 bg-white animate-pulse"></div>
+            <p className="text-white ">HOMES</p>
           </motion.div>
         </div>
 
@@ -103,18 +96,14 @@ const Page = () => {
               className=" rounded-full"
               playsInline={true}
             >
-              <source src="/assets/workintrovideo.mp4" type="video/mp4" />
+              <source src="/assets/2.mp4" type="video/mp4" />
             </video>
           </div>
 
           <p className="text-white text-[7vw] sm:text-[10vw] md:text-6xl px-3 sm:px-10 pb-10">
             As a tight-knit team of experts, we create memorable and emotional
-            websites, digital experiences, and native apps.
+            INFRASTRUCTURE.
           </p>
-        </div>
-
-        <div className="w-full">
-          <div>{/* <Reel /> */}</div>
         </div>
 
         <div className="bg-black px-2 lg:px-20 py-20 flex flex-col gap-10">
@@ -123,18 +112,15 @@ const Page = () => {
             <p className="text-[13vw] text-white">DEVELOPMENT</p>
           </div>
 
-          <div className="flex justify-center bg-gray-800 rounded-full py-10">
+          <div className="flex justify-center bg-gray-800 rounded-full overflow-hidden">
             <video
               autoPlay
               loop
               muted
-              className="w-5/12  rounded-full"
+              className="w-full lg:max-h-[233px] object-cover rounded-full"
               playsInline={true}
             >
-              <source
-                src="/assets/smartdevelopmentvideo.webm"
-                type="video/webm"
-              />
+              <source src="/assets/5.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
@@ -147,37 +133,19 @@ const Page = () => {
             className="w-full h-full"
             playsInline={true}
           >
-            <source src="/assets/backgroundvideo.mp4" type="video/mp4" />
+            <source src="/assets/6.mp4" type="video/mp4" />
           </video>
-          <div className="absolute top-0 left-0 py-2 lg:py-32 px-2 lg:px-10 z-10 flex flex-col">
-            <div className="w-full text-[10vw]">
-              <p>BRAND</p>
+          <div className="absolute top-10 left-0 py-2 lg:py-32 px-2 lg:px-10 z-10 flex flex-col">
+            <div className="w-full text-[10vw] text-white">
+              <p>HOME</p>
               <p>IDENTITIES</p>
-              <div className="w-full lg:py-20 lg:px-10">
-                <div className="h-0.5 w-full bg-black"></div>
-              </div>
-            </div>
-
-            <div className="flex justify-end py-10 sm:px-10">
-              <div className="w-8/12 flex items-start gap-5 md:gap-10">
-                <div className="flex gap-2 text-[2vw] lg:text-xl">
-                  <p>BRAND</p>
-                  <p>IDENTITIES</p>
-                </div>
-                <p className="text-[2vw] lg:text-[2.5vw]">
-                  The only thing that matters in a brand is what you feel when
-                  interacting with a product. We assist established and emerging
-                  brands in creating identities that reflect the brand&apos;s
-                  true identity.
-                </p>
-              </div>
             </div>
           </div>
         </div>
 
         <div className="w-full flex flex-col gap-5 md:gap-10 py-5 lg:py-32 px-2 lg:px-20">
           <div className="flex flex-col text-[10vw]">
-            <p>ART</p>
+            <p>INVESTMENT</p>
             <p>DIRECTION</p>
           </div>
           <div className="w-full flex justify-center scale-x-105">
@@ -188,12 +156,10 @@ const Page = () => {
               className="w-10/12 rounded-full  lg:rounded-[100px] "
               playsInline={true}
             >
-              <source src="/assets/artdirectionvideo.webm" type="video/webm" />
+              <source src="/assets/7.mp4" type="video/webm" />
             </video>
           </div>
         </div>
-
-        <div className="w-full bg-[#e0fd60]">{/* <Imagereel /> */}</div>
 
         <div className="w-full bg-black py-20 px-5 md:px-10">
           <div className="flex flex-col gap-10   md:px-10">
