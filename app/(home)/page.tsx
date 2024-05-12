@@ -12,6 +12,7 @@ import Philosophy from "@/components/home/Philosophy";
 import Resources from "@/components/home/Resources";
 import Inspo from "@/components/home/Inspo";
 import Footer from "@/components/home/Footer";
+import ProgressBar from "@/components/home/ProgressBar";
 
 export default function Home() {
   const stickyElement = useRef(null);
@@ -84,6 +85,9 @@ export default function Home() {
               }}
             >
               <Resources isWhiteCursor={isWhiteCursor2} />
+            </div>
+            <div>
+              <ProgressBar />
             </div>
             {/* <Inspo /> */}
           </div>
