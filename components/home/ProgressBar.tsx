@@ -25,54 +25,36 @@ const ProgressBar = () => {
 
   return (
     <div className="h-[500px] relative">
-      <h1 className="text-black font-semibold leading-[40px] text-[40px] pl-[30px]">
-        Build your dream house
+      <h1 className="text-black font-matterRegular  leading-[40px] text-[50px] pl-[30px]">
+        Build your Dream House
       </h1>
-      <div ref={ref} className="h-full p-10 overflow-hidden">
+      <div ref={ref} className="h-full p-6 sm:p-10 overflow-hidden">
         {/* Animated progress bar with gradient */}
         <motion.div
-          className="h-[50px] relative bg-gradient-to-r from-red-500 to-green-500"
+          className="h-[50px] sm:h-[80px] relative bg-red-900"
           style={{ width }}
         />
+
         {/* Icon and text for sad house */}
-        <div
-          style={{ position: "absolute", left: "100px", top: "200px" }}
-          className="flex flex-col items-center justify-center"
-        >
+        <div className="flex absolute sm:left-[100px] top-[200px] left-[30px] flex-col gap-6 items-center justify-center">
           <motion.img
-            src="/assets/sad.jpeg"
-            style={{
-              width: "150px",
-              height: "150px",
-              opacity: opacitySad,
-            }}
+            src="/assets/logo.png"
+            // style={{
+            //   opacity: opacitySad,
+            // }}
+            className="sm:w-[200px] w-[100px] h-[50px] sm:h-[80px]"
+            alt="logo"
           />
-          <motion.div
-            style={{ color: "black", marginTop: "5px", opacity: opacitySad }}
-            className="font-matterRegular text-[16px] leading-[25px]"
-          >
-            My Crappy House
-          </motion.div>
         </div>
         {/* Icon and text for happy house */}
-        <div
-          style={{ position: "absolute", right: "100px", top: "200px" }}
-          className="flex flex-col items-center justify-center"
-        >
+        <div className="flex flex-col absolute  sm:right-[100px] top-[200px] right-[30px] gap-6 items-center justify-center">
           <motion.img
-            src="/assets/happy.jpeg"
+            src="/assets/dream_house.jpeg"
             style={{
-              width: "150px",
-              height: "150px",
               opacity: opacityHappy,
             }}
+            className="w-[70px] h-[53px] shadow-xl object-contain rounded-xl sm:w-[250px] sm:h-[200px] "
           />
-          <motion.div
-            style={{ color: "black", marginTop: "5px", opacity: opacityHappy }}
-            className="font-matterRegular text-[16px] leading-[25px]"
-          >
-            My Dream House
-          </motion.div>
         </div>
       </div>
     </div>

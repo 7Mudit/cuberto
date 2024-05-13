@@ -29,9 +29,9 @@ const Page = () => {
       )}
       <main className={` ${isActive ? "blurEffect" : ""}`}>
         <div className="w-full flex items-start justify-center  flex-col  md:gap-2 pt-20 lg:py-20 px-5 md:px-20">
-          <p className="text-[18px] font-matterLight font-[400] text-gray-600  ">
+          {/* <p className="text-[18px] font-matterLight font-[400] text-gray-600  ">
             Filter
-          </p>
+          </p> */}
           <div className="hover-underline-animation hover:cursor-pointer  relative   flex justify-start items-center   gap-3  text-5xl  ">
             <p className="text-[45px] font-matterRegular  leading-[52px] md:text-[54px] md:leading-[62px]">
               All Projects
