@@ -11,6 +11,7 @@ import { projectdata1 } from "../../data/projectdata";
 
 import Navbar from "@/components/shared/Navbar";
 import StickyCursor from "@/components/stickyCursor";
+import Image from "next/image";
 
 const Page = () => {
   const { scrollYProgress } = useScroll();
@@ -187,8 +188,11 @@ const Page = () => {
 
           <div className="w-full flex flex-col  gap-5 md:py-10">
             {projectdata1.map((project, index) => (
-              <div key={index} className="relative ">
-                <video
+              <div
+                key={index}
+                className="relative flex flex-col items-center justify-center w-full"
+              >
+                {/* <video
                   className="w-full  rounded-3xl "
                   autoPlay
                   loop
@@ -196,12 +200,16 @@ const Page = () => {
                   playsInline={true}
                 >
                   <source
-                    src={project.video}
+                    src={project.img}
                     type="video/mp4"
                     className="w-full "
                   />
-                </video>
-
+                </video> */}
+                <Image
+                  src={project.image}
+                  className="w-full h-full object-cover"
+                  alt="project image"
+                />
                 <div className="absolute z-10 top-1/4  ">
                   {/* <ProjectReel /> */}
                 </div>
