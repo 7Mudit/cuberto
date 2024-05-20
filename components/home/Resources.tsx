@@ -11,7 +11,7 @@ const Resources = ({ isWhiteCursor }: any) => {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className="bg-black h-auto px-8 md:px-16 rounded-t-[70px] pt-13 md:pt-20 ">
+    <div className="bg-black w-full h-auto px-8 md:px-16 rounded-t-[70px] pt-13 md:pt-20 ">
       <div className="flex flex-col items-start gap-5 py-20">
         <div className="text-[12vw] lg:text-8xl text-white font-sans ">
           Testimonials

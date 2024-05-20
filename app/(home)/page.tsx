@@ -13,6 +13,7 @@ import Resources from "@/components/home/Resources";
 import Inspo from "@/components/home/Inspo";
 import Footer from "@/components/home/Footer";
 import ProgressBar from "@/components/home/ProgressBar";
+import { GoogleGeminiEffectDemo } from "@/components/home/PipesAceternity";
 
 export default function Home() {
   const stickyElement = useRef(null);
@@ -85,9 +86,7 @@ export default function Home() {
               }}
             >
               <Resources isWhiteCursor={isWhiteCursor2} />
-            </div>
-            <div>
-              <ProgressBar />
+              <GoogleGeminiEffectDemo />
             </div>
             {/* <Inspo /> */}
           </div>
