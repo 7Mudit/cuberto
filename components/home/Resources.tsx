@@ -1,9 +1,23 @@
 import React, { useEffect, useRef, useState } from "react";
-import { resourcedata } from "../../data/resourcesdata";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { FreeMode } from "swiper/modules";
+import { FreeMode, Pagination } from "swiper/modules";
+
+export const resourcedata = [
+  {
+    tagline: "Ayan Buildtech transformed my home into a modern marvel!",
+    name: "John Doe",
+  },
+  {
+    tagline: "Excellent service and top-notch quality. Highly recommend!",
+    name: "Jane Smith",
+  },
+  {
+    tagline: "Professional, reliable, and exceptional craftsmanship.",
+    name: "Emily Johnson",
+  },
+];
 
 import Cursor from "../../components/home/Cursor";
 
@@ -32,8 +46,8 @@ const Resources = ({ isWhiteCursor }: any) => {
           pagination={{
             clickable: true,
           }}
-          modules={[FreeMode]}
-          className="mySwiper "
+          modules={[FreeMode, Pagination]}
+          className="mySwiper"
           breakpoints={{
             640: {
               slidesPerView: 1,
@@ -51,48 +65,18 @@ const Resources = ({ isWhiteCursor }: any) => {
         >
           {resourcedata.map((resource, index) => (
             <SwiperSlide key={index} className="w-6/12 px-2 ">
-              <div className="w-full h-[350px] sm:h-[500px] xl:h-[300px] flex flex-col gap-10">
-                {/* <Image
-                  src={resource.image}
-                  alt="resource image"
-                  width={470}
-                  height={260}
-                  className=" object-cover rounded-2xl"
-                  onMouseOver={() => {
-                    setIsActive(true);
-                  }}
-                  onMouseLeave={() => {
-                    setIsActive(false);
-                  }}
-                /> */}
-                <div
-                  onMouseOver={() => {
-                    setIsActive(true);
-                  }}
-                  onMouseLeave={() => {
-                    setIsActive(false);
-                  }}
-                  className="w-[350px] h-[260px] bg-emerald-400 object-cover rounded-2xl "
-                ></div>
-                {/* <p className="font-sans text-white">{resource.tagline}</p> */}
+              <div className="w-full h-[200px] sm:h-[250px] xl:h-[200px] flex flex-col justify-center items-center text-center bg-gray-100 rounded-2xl p-6 shadow-lg">
+                <p className="font-sans text-black text-lg md:text-xl">
+                  &quot;{resource.tagline}&quot;
+                </p>
+                <p className="font-sans text-black text-sm md:text-md mt-4 self-end italic">
+                  - {resource.name}
+                </p>
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
-      {/* <div className="w-full h-auto flex justify-center md:justify-end  md:py-32 px-3 md:px-6">
-        <div className=" w-9/12 md:w-4/12 flex flex-col  gap-10">
-          <p className="text-2xl text-slate-400 text-center font-sans">
-            We regularly release design courses, offer advice to newbie
-            designers, walk you through creating awesome effects, and share
-            source files.
-          </p>
-          <button className="animated-button2    border-white text-white py-6  rounded-full flex justify-center">
-            <span>View Resources</span>
-          </button>
-        </div>
-      </div> */}
-
       {!isWhiteCursor && <Cursor isActive={isActive} text="Drag" />}
     </div>
   );

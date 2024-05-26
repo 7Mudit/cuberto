@@ -17,7 +17,7 @@ const Navbar = forwardRef(function Index(props, ref) {
         pathname === "/about" ? "bg-black" : "bg-white"
       } justify-between items-center`}
     >
-      <Link href="/">
+      <Link href="/" className="z-[1000]">
         <Image src={image_logo} alt="logo image" width={200} height={200} />
       </Link>
 

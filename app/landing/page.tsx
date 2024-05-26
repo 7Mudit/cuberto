@@ -1,36 +1,12 @@
 "use client";
-import logo from "../../public/assets/logo.png";
 import Image from "@/node_modules/next/image";
 import section1image from "../../public/assets/landing-section1-image.png";
 import sectionrrow from "../../public/assets/arrow.png";
 import rocket from "../../public/assets/rocket.svg";
 import thumbsup from "../../public/assets/thumbsup.svg";
-import messages from "../../public/assets/message.svg";
 import fan from "../../public/assets/fan.svg";
 import abdice from "../../public/assets/abdice.svg";
 import barchart from "../../public/assets/barchart.svg";
-import { IoIosArrowRoundForward } from "react-icons/io";
-import section8image from "../../public/assets/section-image.jpeg";
-import section10image from "../../public/assets/section10bg-image.png";
-import { ImQuotesLeft } from "react-icons/im";
-import section11image1 from "../../public/assets/section11image1.jpeg";
-import section11image2 from "../../public/assets/section11image2.jpeg";
-import trustedby1 from "../../public/assets/trustedby1.png";
-import trustedby2 from "../../public/assets/trustedby2.png";
-import trustedby3 from "../../public/assets/trustedby3.png";
-import trustedby4 from "../../public/assets/trustedby4.png";
-import trustedby5 from "../../public/assets/trustedby5.png";
-import { GiCheckMark } from "react-icons/gi";
-import section13image from "../../public/assets/section13image.svg";
-import section13image1 from "../../public/assets/section13image1.png";
-import Link from "@/node_modules/next/link";
-import section7image1 from "../../public/assets/section-7image1.jpeg";
-import section7image2 from "../../public/assets/section7-image2.jpeg";
-import section10image1 from "../../public/assets/section10image1.png";
-import section10image2 from "../../public/assets/section10image2.png";
-import section10image3 from "../../public/assets/section10image3.jpeg";
-import dart from "../../public/assets/dart.svg";
-import lens from "../../public/assets/lens.svg";
 
 import React, { useEffect, useState, useRef } from "react";
 
@@ -38,7 +14,6 @@ import Footer from "@/components/home/Footer";
 
 import Navbar from "@/components/shared/Navbar";
 import StickyCursor from "@/components/stickyCursor";
-import page from "../(home)/page";
 
 const Page = () => {
   const stickyElement = useRef(null);
@@ -63,11 +38,21 @@ const Page = () => {
             <div className="w-full lg:w-6/12 px-10 py-12 flex  flex-col gap-9">
               <div className="texts   space-y-10">
                 <p className="text-2xl sm:text-5xl lg:text-4xl">
-                  Supercharge your conversion rates and increase sales
+                  Together we rise
                 </p>
                 <p className="text-sm sm:text-lg text-slate-500 ">
-                  We design, manage and optimize your landing pages to boost
-                  signups, lead captures, and customer conversions.
+                  We are Ayaan Buildtech, a premier real estate company renowned
+                  for our innovative design, quality construction, and
+                  customer-centric approach. Our strengths lie in our commitment
+                  to excellence and meticulous attention to detail, ensuring
+                  each project meets the highest standards. We leverage
+                  cutting-edge technology and sustainable practices to deliver
+                  properties that not only enhance lifestyles but also preserve
+                  the environment. Our dedicated team of professionals provides
+                  personalized service, guiding clients through every step of
+                  their real estate journey. At Ayaan Buildtech, we build more
+                  than homes; we build lasting relationships and thriving
+                  communities.
                 </p>
               </div>
 
@@ -89,40 +74,48 @@ const Page = () => {
 
         <div className="section2 w-full space-y-5 px-2 md:px-32 text-center py-10">
           <p className="text-xl sm:text-2xl md:text-3xl ">
-            Don&apos;t waste money on more traffic - fix your landing pages
-            first
+            Welcome to the one stop solution
           </p>
 
           <p className="text-slate-500">
-            Get more leads on your existing traffic instead.
+            Take your real estate portfolio to the next level
           </p>
         </div>
 
         <div className="section3 flex justify-center md:text-start text-center gap-10 md:gap-0 flex-wrap pt-10 pb-16">
           <div className="sm:w-7/12 flex flex-col  md:items-start items-center md:w-4/12 space-y-6 px-10">
             <Image alt="logo" src={rocket} className="w-16 md:w-10" />
-            <p className="font-semibold ">Increase conversion rates</p>
+            <p className="font-semibold ">High ROI</p>
             <p>
-              Highly targeted landing pages will increase your conversion rates,
-              and optimization with A/B testing takes you to the next level.{" "}
+              Ayaan Buildtech is a premier real estate company renowned for
+              innovative design, quality construction, and a customer-centric
+              approach. Our projects consistently deliver high ROI, ensuring
+              maximum value and profitability for our investors. We build more
+              than homes; we build lasting relationships and thriving
+              communities.{" "}
             </p>
           </div>
           <div className="sm:w-7/12 flex flex-col md:items-start items-center md:w-4/12 space-y-6 px-10">
             <Image alt="logo" src={thumbsup} className="w-16 md:w-10" />
-            <p className="font-semibold">Increase conversion rates</p>
+            <p className="font-semibold">Credibility</p>
             <p>
-              Highly targeted landing pages will increase your conversion rates,
-              and optimization with A/B testing takes you to the next level.{" "}
+              Ayaan Buildtech is a premier real estate company with 20 years of
+              experience, renowned for innovative design, quality construction,
+              and a customer-centric approach. Our projects consistently deliver
+              high ROI, ensuring maximum value and profitability for our
+              investors. Over two decades, we have built a reputation for
+              reliability and excellence, creating lasting relationships and
+              thriving communities.{" "}
             </p>
           </div>
-          <div className="sm:w-7/12 flex flex-col md:items-start items-center md:w-4/12 space-y-6 px-10">
+          {/* <div className="sm:w-7/12 flex flex-col md:items-start items-center md:w-4/12 space-y-6 px-10">
             <Image alt="logo" src={messages} className="w-16 md:w-10" />
             <p className="font-semibold">Increase conversion rates</p>
             <p>
               Highly targeted landing pages will increase your conversion rates,
               and optimization with A/B testing takes you to the next level.{" "}
             </p>
-          </div>
+          </div> */}
         </div>
 
         <div className="section5 flex flex-col gap-10 py-10 items-center ">
@@ -138,11 +131,11 @@ const Page = () => {
                 <Image alt="logo" src={barchart} />
               </div>
 
-              <p className="font-semibold">Full service - growth</p>
+              <p className="font-semibold">Construction</p>
               <p className="text-slate-500">
-                Serious about optimization? Outsource everything to us. We
-                design, optimize, analyze and report on your results on a
-                monthly retainer.
+                With 20 years of experience, Ayaan Buildtech delivers high ROI
+                through innovative design, quality construction, and reliable,
+                customer-focused building services.
               </p>
 
               <button className="bg-[#7357F6] hover:bg-[#6852c8] transition-colors duration-200 text-white px-5  rounded-full py-2">
@@ -153,20 +146,21 @@ const Page = () => {
             <div className="w-10/12 sm:w-6/12 bg-slate-200 rounded-lg py-10 px-5 lg:w-4/12 text-center flex flex-col items-center gap-7">
               <Image alt="logo" src={fan} />
 
-              <p className="font-semibold">Design only</p>
+              <p className="font-semibold">Portfolio management</p>
               <p className="text-slate-500">
-                We create your custom landing page to meet your conversion
-                objective and brand, including copy and design at a fixed price.
+                Ayaan Buildtech delivers high ROI through innovative design,
+                quality construction, and expert real estate portfolio
+                management, backed by 20 years of industry experience.
               </p>
 
               <button className="bg-[#7357F6] hover:bg-[#6852c8] transition-colors duration-200 text-white px-5  rounded-full py-2">
-                I need help with design
+                I need help with growth
               </button>
             </div>
           </div>
         </div>
 
-        <div className="progress px-3 flex md:flex-row flex-col gap-10 md:gap-6 items-center justify-center  py-10 md:py-20">
+        {/* <div className="progress px-3 flex md:flex-row flex-col gap-10 md:gap-6 items-center justify-center  py-10 md:py-20">
           <div className="flex flex-col gap-3 w-8/12 md:w-3/12 text-center items-center ">
             <Image alt="logo" src={dart} className="w-10" />
             <span className="bg-[#7357F6] rounded-full w-3 h-3 p-4 flex text-white font-semibold items-center justify-center">
@@ -476,7 +470,7 @@ const Page = () => {
               <Image alt="logo" src={sectionrrow} className="w-6 sm:w-8" />
             </div>
           </div>
-        </div>
+        </div> */}
 
         <Footer />
       </section>
