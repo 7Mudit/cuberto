@@ -17,6 +17,10 @@ const navItems = [
     href: "/project",
   },
   {
+    title: "Landing",
+    href: "/landing",
+  },
+  {
     title: "About",
     href: "/about",
   },

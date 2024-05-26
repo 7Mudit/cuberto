@@ -463,3 +463,26 @@ body {
   transform-origin: bottom right;
   /* Change the transform origin to bottom left */
 }
+
+
+.section1 {
+  background-color: rgba(239, 243, 250, 1);
+}
+
+.section1button {
+  background-color: rgba(115, 87, 246, 1);
+}
+
+.quotes {
+  color: rgb(248, 168, 8, 0.5);
+}
+
+.examplebox {
+  background-color: rgba(246, 219, 161, 0.5);
+  ;
+}
+
+.section-14 {
+  background-color: rgba(239, 243, 250, 1);
+
+}
