@@ -1,0 +1,10 @@
+.cursorContainer {
+    display: relative;
+    z-index: 1000;
+}
+
+.cursorContainer {
+    @media (max-width: 768px) {
+        display: none;
+    }
+}

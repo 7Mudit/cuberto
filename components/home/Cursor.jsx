@@ -2,6 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { Noto_Sans } from "next/font/google";
+import "./Cursor.css";
 
 const noto = Noto_Sans({
   subsets: ["latin"],
@@ -55,7 +56,7 @@ export default function BlurryCursor({ isActive, text }) {
   }, [isActive]);
 
   return (
-    <div className="relative z-[1000]">
+    <div className="cursorContainer relative z-[1000]">
       <div
         style={{
           backgroundColor: "white",
