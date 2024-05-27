@@ -4,11 +4,12 @@ import section1image from "../../public/assets/landing-section1-image.png";
 import sectionrrow from "../../public/assets/arrow.png";
 import rocket from "../../public/assets/rocket.svg";
 import thumbsup from "../../public/assets/thumbsup.svg";
+import landingImage from "../../public/assets/landingpageimage.jpeg";
 import fan from "../../public/assets/fan.svg";
 import abdice from "../../public/assets/abdice.svg";
 import barchart from "../../public/assets/barchart.svg";
 
-import React, { useEffect, useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 
 import Footer from "@/components/home/Footer";
 
@@ -33,8 +34,8 @@ const Page = () => {
         <StickyCursor stickyElement={stickyElement} />
       )}
       <section className="w-screen">
-        <div className="section1 w-full ">
-          <div className=" w-full flex  lg:flex-row flex-col gap-3 lg:gap-6 lg:px-11 sm:mt-10 px-8">
+        <div className="section1 w-full p-10">
+          <div className=" w-full flex  lg:flex-row flex-col gap-3 lg:items-center lg:gap-6 lg:px-11 sm:mt-10 px-8">
             <div className="w-full lg:w-6/12 px-10 py-12 flex  flex-col gap-9">
               <div className="texts   space-y-10">
                 <p className="text-2xl sm:text-5xl lg:text-4xl">
@@ -60,21 +61,25 @@ const Page = () => {
                 <button className="section1button hover:bg-[#6852c8] transition-colors duration-200 text-white px-8 text-[8px] sm:text-xl rounded-full py-5">
                   Get my free consult
                 </button>
-                <div className="flex items-start">
-                  <Image alt="logo" src={sectionrrow} className="w-6 sm:w-8" />
+                <div className="flex rounded-lg shadow-lg  items-start">
+                  <Image alt="logo" src={sectionrrow} className="w-6  sm:w-8" />
                 </div>
               </div>
             </div>
 
             <div className="w-6/12 mx-auto lg:m-0 flex justify-center ">
-              <Image alt="logo" src={section1image} className="w-10/12" />
+              <Image
+                alt="logo"
+                src={landingImage}
+                className="w-10/12 rounded-lg shadow-lg h-4/6"
+              />
             </div>
           </div>
         </div>
 
         <div className="section2 w-full space-y-5 px-2 md:px-32 text-center py-10">
           <p className="text-xl sm:text-2xl md:text-3xl ">
-            Welcome to the one stop solution
+            welcome to the one stop solution
           </p>
 
           <p className="text-slate-500">
@@ -146,7 +151,7 @@ const Page = () => {
             <div className="w-10/12 sm:w-6/12 bg-slate-200 rounded-lg py-10 px-5 lg:w-4/12 text-center flex flex-col items-center gap-7">
               <Image alt="logo" src={fan} />
 
-              <p className="font-semibold">Portfolio management</p>
+              <p className="font-semibold">portfolio management</p>
               <p className="text-slate-500">
                 Ayaan Buildtech delivers high ROI through innovative design,
                 quality construction, and expert real estate portfolio

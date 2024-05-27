@@ -15,6 +15,8 @@ import StickyCursor from "@/components/stickyCursor";
 import Cursor from "../../components/home/Cursor";
 import { clientInterest } from "../../data/clientInterests";
 import { budgetdata } from "../../components/contact/budgetdata";
+import axios from "axios";
+import { toast } from "react-hot-toast";
 
 export default function Contact() {
   const { register, handleSubmit, reset } = useForm();
@@ -24,7 +26,7 @@ export default function Contact() {
   const stickyElement = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const [isWhiteCursor, setIsWhiteCursor] = useState(true);
-
+  const [loading, setLoading] = useState(false);
   const bannerRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -66,19 +68,47 @@ export default function Contact() {
     updateFormData(selectedBudgets);
   };
 
-  const onSubmit = (data) => {
-    const formDataWithFile = {
-      ...data,
-      file: selectedFile,
-      interests: selectedInterests,
-      budgetOptions: selectedBudgets,
-    };
-    console.log(formDataWithFile);
-    // console.log(formData);
-    reset();
-    setSelectedFile(null);
-    setSelectedInterests([]);
-    setSelectedBudgets([]);
+  const onSubmit = async (data) => {
+    try {
+      setLoading(true);
+      toast.loading("Submitting your form...");
+
+      const formDataWithFile = {
+        ...data,
+        file: selectedFile,
+        interests: selectedInterests,
+        budgetOptions: selectedBudgets,
+      };
+
+      const response1 = await axios.post(
+        "https://cubertomailsending.onrender.com/api/v1/apply",
+        formDataWithFile
+      );
+      const response2 = await axios.post(
+        "https://cubertomailsending.onrender.com/api/v1/recieve",
+        formDataWithFile
+      );
+
+      setLoading(false);
+
+      toast.dismiss(); // Dismiss the loading toast
+      toast.success("Form submitted successfully!");
+
+      reset();
+      setSelectedFile(null);
+      setSelectedInterests([]);
+      setSelectedBudgets([]);
+    } catch (error) {
+      setLoading(false);
+      toast.dismiss(); // Dismiss the loading toast
+      toast.error("Error submitting the form, please try again.");
+
+      reset();
+      setSelectedFile(null);
+      setSelectedInterests([]);
+      setSelectedBudgets([]);
+      console.log("this is the error ", error);
+    }
   };
 
   const handleFileChange = (event) => {
@@ -107,7 +137,10 @@ export default function Contact() {
 
   return (
     <>
-      <section>
+      <section className="relative">
+        {loading && (
+          <div className="absolute w-screen h-full z-50 bg-white opacity-80 "></div>
+        )}
         <Navbar
           ref={stickyElement}
           // @ts-ignore
@@ -200,7 +233,7 @@ export default function Contact() {
 
         {/* <BudgetOptions updateFormData={updateFormData} /> */}
 
-        <div className="w-full">
+        {/* <div className="w-full">
           <div className="flex flex-col gap-10 w-full">
             <motion.div
               initial="hidden"
@@ -232,7 +265,7 @@ export default function Contact() {
               ))}
             </div>
           </div>
-        </div>
+        </div> */}
         {/* 
         <label htmlFor="fileInput" className="cursor-pointer">
           <motion.div

@@ -7,5 +7,8 @@ export const inputdata = [
     type: "email",
     placeholder: "Your email",
   },
-  { type: "text", placeholder: "Tell us about your project" },
+  {
+    type: "tell",
+    placeholder: "Enter your phone number",
+  },
 ];
